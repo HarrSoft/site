@@ -8,14 +8,10 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<div class="app">
-	<main>
+<div class="bg-white min-h-screen">
+	<main class="bg-white">
 		<slot />
 	</main>
-
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
-	</footer>
 </div>
 
 <style>
