@@ -1,6 +1,5 @@
 <script>
-	import "../app.css";
-
+	import '../app.css';
 </script>
 
 <svelte:head>
@@ -15,5 +14,4 @@
 </div>
 
 <style>
-	
 </style>

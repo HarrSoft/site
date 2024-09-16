@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import { fly, slide } from 'svelte/transition';
 	import { writable } from 'svelte/store';
-	import { preprocess } from 'svelte/compiler';
 
 	const serviceCategories = [
 		{
