@@ -27,15 +27,6 @@
 	];
 	let activeCategory = writable('Development');
 
-	// Function to scroll to category
-	// const scrollToCategory = (category: string) => {
-	//     const section = document.getElementById(category);
-	//     if (section) {
-	//         section.scrollIntoView({ behavior: "smooth" });
-	//     }
-	// };
-
-	// Intersection Observer for scroll-triggered activation
 	let observer: IntersectionObserver;
 
 	onMount(() => {
@@ -216,7 +207,7 @@
 	</div>
 </div>
 
-<style>
+<style scoped>
 	.container {
 		display: flex;
 	}
@@ -241,6 +232,19 @@
 		margin-bottom: 2rem;
 		min-height: 75vh;
 	}
+
+	p {
+		@apply mt-2 font-Roboto;
+	}
+
+	h2 {
+		@apply mt-2 font-HCapsuleBlack font-black;
+	}
+
+	h3 {
+		@apply mt-2 font-CapsuleSemiExpanded;
+	}
+
 	.category-link {
 		transition: color 0.3s ease;
 	}
