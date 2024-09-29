@@ -61,7 +61,7 @@
 		</button>
 		<button on:click={presentEmail}>
 			<span aria-hidden="true" style="margin-right: 1rem">@</span>
-			Email me
+			Email us
 		</button>
 	</div>
 	<nav class={menuHidden ? 'hidden' : ''} aria-hidden={menuHidden}>
