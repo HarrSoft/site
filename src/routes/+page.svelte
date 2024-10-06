@@ -41,7 +41,7 @@
 			<canvas class=" sm:scale-150" bind:this={canvas} />
 		</div>
 		<div
-			class=" sm:px-[10%] px-5 sm:border-x-2 border-x-0 border-t-2 sm:border-t-0 sm:mt-6 mt-0 sm:max-w-[50vw] sm:text-center z-10 sm:mx-0 md:mx-10 leading-[2rem] font-HCapsuleBlack text-blue sm:w-1/2 flex flex-col"
+			class=" sm:px-[10%] px-5 sm:border-x-2 border-blue border-x-0 border-t-2 sm:border-t-0 sm:mt-6 mt-0 sm:max-w-[50vw] sm:text-center z-10 sm:mx-0 md:mx-10 leading-[2rem] font-HCapsuleBlack text-blue sm:w-1/2 flex flex-col"
 		>
 			<h1 class="text-xl font-black sm:mt-0 mt-10">
 				Harrsoft is a Cooperative Cooperation of designers, software developers, and creators.

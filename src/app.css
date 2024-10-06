@@ -16,29 +16,30 @@
 }
 
 @layer base {
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src:  local('Roboto') url('/static/fonts/Roboto-Regular.ttf') format('truetype');
-  }
-  
-  @font-face {
-    font-family: 'H74 Capsule';
-    src: local('H74 Capsule') url('/static/fonts/HCapsule-Black.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+	@font-face {
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: local('Roboto') url('/static/fonts/Roboto-Regular.ttf') format('truetype');
+	}
 
-  @font-face {
-    font-family: 'H74 Capsule SemiExpanded';
-    src: local('H74 Capsule SemiExpanded') url('/static/fonts/HCapsule-SemiExpanded.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
+	@font-face {
+		font-family: 'H74 Capsule';
+		src: local('H74 Capsule') url('/static/fonts/HCapsule-Black.ttf') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'H74 Capsule SemiExpanded';
+		src: local('H74 Capsule SemiExpanded') url('/static/fonts/HCapsule-SemiExpanded.ttf')
+			format('truetype');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
 }
 
 .flex-center {
@@ -49,5 +50,12 @@
   @apply border-2 m-1 my-2 rounded-sm p-2 min-w-24
 }
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
+}
+
+#app {
+	margin-bottom: 12vh;
+}
+#app.frozen {
+	padding-right: 27px;
 }
