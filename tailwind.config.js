@@ -2,9 +2,24 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {},
+    extend: {
+        keyframes: {
+          appear: {
+            "0%": {
+              opacity: "0",
+            },
+            "100%": {
+              opacity: "1",
+            },
+         },
+         animation: {
+           appear: "appear 0.5s ease-in-out",
+         }
+      }
+    },
     colors: {
       'white': '#EBF0F1',
+      'blue': '#6E85C4',
     },
     fontFamily: {
       'Roboto': ['Roboto'],
