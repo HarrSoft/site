@@ -12,30 +12,29 @@
   .no-scrollbar {
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
-}
+  }
 }
 
 @layer base {
 	@font-face {
+		src: local('Roboto') url('/static/fonts/Roboto-Regular.ttf') format('truetype');
 		font-family: 'Roboto';
 		font-style: normal;
 		font-weight: 400;
 		font-display: swap;
-		src: local('Roboto') url('/static/fonts/Roboto-Regular.ttf') format('truetype');
 	}
 
 	@font-face {
-		font-family: 'H74 Capsule';
 		src: local('H74 Capsule') url('/static/fonts/HCapsule-Black.ttf') format('truetype');
+		font-family: 'H74 Capsule';
 		font-weight: normal;
 		font-style: normal;
 		font-display: swap;
 	}
 
 	@font-face {
+		src: local('H74 Capsule SemiExpanded') url('/static/fonts/HCapsule-SemiExpanded.ttf') format('truetype');
 		font-family: 'H74 Capsule SemiExpanded';
-		src: local('H74 Capsule SemiExpanded') url('/static/fonts/HCapsule-SemiExpanded.ttf')
-			format('truetype');
 		font-weight: normal;
 		font-style: normal;
 		font-display: swap;
@@ -51,11 +50,4 @@
 }
 html {
 	scroll-behavior: smooth;
-}
-
-#app {
-	margin-bottom: 12vh;
-}
-#app.frozen {
-	padding-right: 27px;
 }

@@ -8,8 +8,8 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<div id="app" class="bg-white min-h-screen w-screen text-center px-0 py-2.5 overflow-x-hidden">
-	<Nav></Nav>
+<div class="bg-white min-h-screen max-w-screen overflow-x-hidden">
+	<Nav />
 	<main class="bg-white">
 		<slot />
 	</main>
