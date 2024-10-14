@@ -56,10 +56,10 @@
 			if (e.key === 'Escape') close(e);
 		}}
 		aria-hidden={!isOpen}
-		class="fixed top-0 right-0 bottom-0 left-0 justify-center items-center flex z-20"
-		transition:modalFade={{ duration: 700 }}
+		class="fixed top-0 right-0 bottom-0 left-0 justify-center items-center bg-white flex z-20"
+		transition:modalFade={{ duration: 400 }}
 	>
-		<div class="focused-content bg-cyan-600 flex-initial basis-4/5 h-4/5 overflow-y-auto">
+		<div class="focused-content bg-blue flex-initial basis-4/5 h-4/5 overflow-y-hidden">
 			<button id="closer" aria-label="Close" on:click={close} class="absolute z-21">
 				Close <span aria-hidden="true">❌</span>
 			</button>
@@ -69,9 +69,6 @@
 {/if}
 
 <style scoped>
-	#modal-backdrop {
-		background-color: rgba(24, 24, 31, 0.87);
-	}
 	.focused-content {
 		box-shadow: 2px 2px 20px 1px rgb(59, 59, 124);
 	}
