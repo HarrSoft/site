@@ -4,6 +4,10 @@
 	import gif from '$lib/gif/landinggif-harrsoft.gif';
 	import gif2 from '$lib/gif/landinggif2-harrsoft.gif';
 
+	import Modal from '$com/modal.svelte';
+	import { isModalOpen } from '$lib/stores/modal';
+	import { fadeScale } from '$lib/animations';
+
 	// canvas
 	let canvas: HTMLCanvasElement;
 	let loading: boolean;
@@ -12,15 +16,11 @@
 	let height: number;
 	let width: number;
 
-	import Modal from '$com/modal.svelte';
-
-	let showContactForm: boolean = false;
-
 	function presentForm() {
-		showContactForm = true;
+		isModalOpen.set(true);
 	}
 	function hideForm() {
-		showContactForm = false;
+		isModalOpen.set(false);
 	}
 
 	// dom functions
@@ -37,18 +37,17 @@
 
 <svelte:window bind:innerHeight={height} bind:innerWidth={width} />
 
-<section class="flex flex-col items-center w-full overflow-hidden max-w-screen">
-	<div
-		class="font-CapsuleSemiExpanded z-[1000] fixed grid h-screen w-screen max-w-screen place-items-center duration-500"
-		style="
-		opacity: {loading ? 1 : 0}; 
-		height: {loading ? '100vh' : '0%'};
-		"
-	>
-		<p class="">loading</p>
-	</div>
-	<section class="flex-center items-center justify-center min-h-screen flex-col translate-y-[-10%]">
-		<div class="h-[60vh] w-screen pointer-events-none mt-[10vh]">
+<div class="flex flex-col items-center w-full overflow-hidden">
+	<section class="flex-center items-center justify-center min-h-screen w-full flex-col relative">
+		<div class="h-[60vh] pointer-events-none mt-10">
+			{#if loading}
+				<div
+					class="font-CapsuleSemiExpanded z-[1000] absolute left-0 top-0 grid h-full w-full place-items-center duration-500"
+					transition:fadeScale={{}}
+				>
+					<p class="">loading</p>
+				</div>
+			{/if}
 			<canvas class=" sm:scale-150" bind:this={canvas} />
 		</div>
 		<div
@@ -65,7 +64,7 @@
 		</div>
 	</section>
 	<section
-		class="sm:mx-10 flex border-2 border-blue sm:flex-row text-blue flex-col-reverse items-center sm:mt-10 mt-[30%] pt-0 sm:w-[80vw] w-screen"
+		class="sm:mx-10 flex border-2 border-blue sm:flex-row text-blue flex-col-reverse items-center sm:mt-10 mt-[30%] pt-0 sm:w-[80vw] w-full"
 	>
 		<div class="p-3 py-10 sm:w-1/2 w-full sm:ml-20">
 			<h1 class="font-HCapsuleBlack font-black sm:text-5xl text-4xl">We Build</h1>
@@ -84,19 +83,19 @@
 	</section>
 
 	<!-- grid section -->
-	<section class="sm:max-w-[60vw] sm:my-[-2%] w-screen flex items-center relative overflow-hidden">
+	<section class="sm:max-w-[60vw] sm:my-[-2%] w-full flex items-center relative overflow-hidden">
 		<button
 			class="sm:w-[500px] w-[80vw] bg-white p-4 flex justify-center rounded-lg border-2 border-blue absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-black"
 			on:click={presentForm}
 		>
 			Contact Us
 		</button>
-		<Modal on:close={hideForm} isOpen={showContactForm}></Modal>
+		<Modal on:close={hideForm}></Modal>
 		<enhanced:img class="w-[100vw]" src="../lib/images/grid.png" />
 	</section>
 
 	<section
-		class="sm:mx-10 flex border-2 border-blue sm:flex-row text-blue flex-col-reverse items-center sm:mb-10 pt-0 sm:w-[80vw] w-screen"
+		class="sm:mx-10 flex border-2 border-blue sm:flex-row text-blue flex-col-reverse items-center sm:mb-10 pt-0 sm:w-[80vw] w-full"
 	>
 		<div class="sm:w-1/2 sm:m-10 sm:my-10">
 			<img src={gif} alt="visual element representing our values" />
@@ -113,4 +112,4 @@
 			</div>
 		</div>
 	</section>
-</section>
+</div>

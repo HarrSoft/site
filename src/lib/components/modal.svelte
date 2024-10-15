@@ -1,15 +1,15 @@
 <script setup lang="ts">
 	import { createEventDispatcher } from 'svelte';
+	import { isModalOpen } from '$lib/stores/modal';
 	import { cubicOut } from 'svelte/easing';
 
 	const dispatch = createEventDispatcher();
 	function close(e: MouseEvent | KeyboardEvent) {
 		dispatch('close', e);
 	}
-	export let isOpen = false;
 
 	$: {
-		if (typeof document !== 'undefined' && isOpen) {
+		if (typeof document !== 'undefined' && $isModalOpen) {
 			const scrollY = `${window.scrollY}px`;
 			document.body.style.position = 'fixed';
 			document.body.style.top = `-${scrollY}`;
@@ -25,7 +25,7 @@
 			if (appElement) {
 				appElement.classList.remove('frozen');
 			}
-			window.scrollTo(0, parseInt(scrollY || '0') * -1);
+			window.scrollTo({ left: 0, top: parseInt(scrollY || '0') * -1, behavior: 'instant' });
 		}
 	}
 	function modalFade(node: HTMLElement, { delay = 0, duration = 700, easing = cubicOut }) {
@@ -45,7 +45,7 @@
 	}
 </script>
 
-{#if isOpen}
+{#if $isModalOpen}
 	<div
 		id="modal-backdrop"
 		role="dialog"
@@ -55,8 +55,8 @@
 		on:keydown={(e) => {
 			if (e.key === 'Escape') close(e);
 		}}
-		aria-hidden={!isOpen}
-		class="fixed top-0 right-0 bottom-0 left-0 justify-center items-center bg-white flex z-20"
+		aria-hidden={!$isModalOpen}
+		class="fixed top-0 right-0 bottom-0 left-0 justify-center items-center bg-white bg-opacity-85 flex z-20"
 		transition:modalFade={{ duration: 400 }}
 	>
 		<div class="focused-content bg-blue flex-initial basis-4/5 h-4/5 overflow-y-hidden">
