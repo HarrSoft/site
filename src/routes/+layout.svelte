@@ -9,9 +9,9 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<div class="bg-white min-h-screen w-full {$isModalOpen ? 'pr-[17px]' : ''} overflow-x-clip">
+<div class="min-h-screen w-full bg-white {$isModalOpen ? 'pr-[17px]' : ''} overflow-x-clip">
 	<Nav />
-	<main class="bg-white">
+	<main class="bg-white pt-14">
 		<slot />
 	</main>
 </div>
