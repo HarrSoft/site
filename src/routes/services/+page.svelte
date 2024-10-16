@@ -50,7 +50,7 @@
 <svelte:window bind:innerWidth={screenWidth} />
 <div class="sticky flex">
 	<div
-		class={`fixed top-0 left-0 sm:w-1/6 bg-white flex flex-col justify-center h-screen p-2 ${screenWidth < 500 ? 'hidden' : ''}`}
+		class={`fixed left-0 top-0 flex h-screen flex-col justify-center bg-white p-2 sm:w-1/6 ${screenWidth < 500 ? 'hidden' : ''}`}
 	>
 		<ul class=" ">
 			{#each serviceCategories as category}
@@ -70,7 +70,7 @@
 		</ul>
 	</div>
 
-	<div class="sm:ml-[35%] ml-0 p-4 sm:mr-[25%] mr-0 mt-16 sm:mt-0">
+	<div class="ml-0 mr-0 mt-16 p-4 sm:ml-[35%] sm:mr-[25%] sm:mt-0 sm:pt-0">
 		<section id="Development" class="service-section" in:fly={{ y: 200, duration: 300 }}>
 			<h2>Development</h2>
 
@@ -209,9 +209,9 @@
 	</div>
 </div>
 
-<style scoped>
+<style scoped lang="postcss">
 	.service-section {
-		@apply w-full sm:h-screen sm:mt-0 mt-[2vh] sm:grid sm:place-content-center;
+		@apply mt-[2vh] min-h-[98vh] w-full sm:grid sm:place-content-center;
 	}
 
 	p {

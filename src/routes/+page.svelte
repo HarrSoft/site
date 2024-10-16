@@ -4,6 +4,10 @@
 	import gif from '$lib/gif/landinggif-harrsoft.gif';
 	import gif2 from '$lib/gif/landinggif2-harrsoft.gif';
 
+	import Modal from '$com/modal.svelte';
+	import { isModalOpen } from '$lib/stores/modal';
+	import { fadeScale } from '$lib/animations';
+
 	// canvas
 	let canvas: HTMLCanvasElement;
 	let loading: boolean;
@@ -12,15 +16,11 @@
 	let height: number;
 	let width: number;
 
-	import Modal from '$com/modal.svelte';
-
-	let showContactForm: boolean = false;
-
 	function presentForm() {
-		showContactForm = true;
+		isModalOpen.set(true);
 	}
 	function hideForm() {
-		showContactForm = false;
+		isModalOpen.set(false);
 	}
 
 	// dom functions
@@ -37,24 +37,23 @@
 
 <svelte:window bind:innerHeight={height} bind:innerWidth={width} />
 
-<section class="flex flex-col items-center w-full overflow-hidden max-w-screen">
-	<div
-		class="font-CapsuleSemiExpanded z-[1000] fixed grid h-screen w-screen max-w-screen place-items-center duration-500"
-		style="
-		opacity: {loading ? 1 : 0}; 
-		height: {loading ? '100vh' : '0%'};
-		"
-	>
-		<p class="">loading</p>
-	</div>
-	<section class="flex-center items-center justify-center min-h-screen flex-col translate-y-[-10%]">
-		<div class="h-[60vh] w-screen pointer-events-none mt-[10vh]">
-			<canvas class=" sm:scale-150" bind:this={canvas} />
+<div class="-mt-14 flex w-full flex-col items-center overflow-hidden">
+	<section class="flex-center relative min-h-screen w-full flex-col items-center justify-center">
+		<div class="pointer-events-none h-[60vh] w-full">
+			{#if loading}
+				<div
+					class="absolute left-0 top-0 z-[1000] grid h-full w-full place-items-center font-CapsuleSemiExpanded duration-500"
+					transition:fadeScale={{}}
+				>
+					<p class="">loading</p>
+				</div>
+			{/if}
+			<canvas class="h-full w-full sm:scale-150" bind:this={canvas} />
 		</div>
 		<div
-			class="sm:px-[10%] px-5 sm:border-x-2 border-blue border-x-0 border-t-2 sm:border-t-0 sm:mt-6 mt-0 sm:max-w-[50vw] sm:text-center z-10 sm:mx-0 md:mx-10 leading-[2rem] font-HCapsuleBlack text-blue sm:w-1/2 flex flex-col"
+			class="z-10 mt-0 flex flex-col border-x-0 border-t-2 border-blue px-5 font-HCapsuleBlack leading-[2rem] text-blue sm:mx-0 sm:mt-6 sm:w-1/2 sm:max-w-[50vw] sm:border-x-2 sm:border-t-0 sm:px-[10%] sm:text-center md:mx-10"
 		>
-			<h1 class="text-xl font-black sm:mt-0 mt-10">
+			<h1 class="mt-10 text-xl font-black sm:mt-0">
 				Harrsoft is a Cooperative Cooperation of designers, software developers, and creators.
 			</h1>
 			<br />
@@ -65,11 +64,11 @@
 		</div>
 	</section>
 	<section
-		class="sm:mx-10 flex border-2 border-blue sm:flex-row text-blue flex-col-reverse items-center sm:mt-10 mt-[30%] pt-0 sm:w-[80vw] w-screen"
+		class="mt-[30%] flex w-full flex-col-reverse items-center border-2 border-blue pt-0 text-blue sm:mx-10 sm:mt-10 sm:w-[80vw] sm:flex-row"
 	>
-		<div class="p-3 py-10 sm:w-1/2 w-full sm:ml-20">
-			<h1 class="font-HCapsuleBlack font-black sm:text-5xl text-4xl">We Build</h1>
-			<div class="mt-10 sm:text-3xl text-lg font-HCapsuleBlack h-full gap-10 grid grid-cols-2">
+		<div class="w-full p-3 py-10 sm:ml-20 sm:w-1/2">
+			<h1 class="font-HCapsuleBlack text-4xl font-black sm:text-5xl">We Build</h1>
+			<div class="mt-10 grid h-full grid-cols-2 gap-10 font-HCapsuleBlack text-lg sm:text-3xl">
 				<p>Websites</p>
 				<p>Integrations</p>
 				<p>Brands</p>
@@ -78,32 +77,32 @@
 				<p>Platforms</p>
 			</div>
 		</div>
-		<div class="sm:w-1/2 sm:m-10 sm:my-10">
+		<div class="sm:m-10 sm:my-10 sm:w-1/2">
 			<img src={gif2} alt="visual element representing our services" />
 		</div>
 	</section>
 
 	<!-- grid section -->
-	<section class="sm:max-w-[60vw] sm:my-[-2%] w-screen flex items-center relative overflow-hidden">
+	<section class="relative flex w-full items-center overflow-hidden sm:my-[-2%] sm:max-w-[60vw]">
 		<button
-			class="sm:w-[500px] w-[80vw] bg-white p-4 flex justify-center rounded-lg border-2 border-blue absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-black"
+			class="absolute left-1/2 top-1/2 flex w-[80vw] -translate-x-1/2 -translate-y-1/2 transform justify-center rounded-lg border-2 border-blue bg-white p-4 font-black sm:w-[500px]"
 			on:click={presentForm}
 		>
 			Contact Us
 		</button>
-		<Modal on:close={hideForm} isOpen={showContactForm}></Modal>
+		<Modal on:close={hideForm}></Modal>
 		<enhanced:img class="w-[100vw]" src="../lib/images/grid.png" />
 	</section>
 
 	<section
-		class="sm:mx-10 flex border-2 border-blue sm:flex-row text-blue flex-col-reverse items-center sm:mb-10 pt-0 sm:w-[80vw] w-screen"
+		class="flex w-full flex-col-reverse items-center border-2 border-blue pt-0 text-blue sm:mx-10 sm:mb-10 sm:w-[80vw] sm:flex-row"
 	>
-		<div class="sm:w-1/2 sm:m-10 sm:my-10">
+		<div class="sm:m-10 sm:my-10 sm:w-1/2">
 			<img src={gif} alt="visual element representing our values" />
 		</div>
-		<div class=" p-3 py-10 sm:w-1/2 w-full sm:ml-20">
-			<h1 class="font-HCapsuleBlack font-black sm:text-5xl text-4xl">We Build</h1>
-			<div class=" mt-10 sm:text-3xl text-lg font-HCapsuleBlack h-full gap-10 grid grid-cols-2">
+		<div class=" w-full p-3 py-10 sm:ml-20 sm:w-1/2">
+			<h1 class="font-HCapsuleBlack text-4xl font-black sm:text-5xl">We Build</h1>
+			<div class=" mt-10 grid h-full grid-cols-2 gap-10 font-HCapsuleBlack text-lg sm:text-3xl">
 				<p>COMMUNITIES</p>
 				<p>FOUNDATIONS</p>
 				<p>UNDERSTANDING</p>
@@ -113,4 +112,4 @@
 			</div>
 		</div>
 	</section>
-</section>
+</div>
