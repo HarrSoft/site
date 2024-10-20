@@ -37,7 +37,7 @@
 
 <svelte:window bind:innerHeight={height} bind:innerWidth={width} />
 
-<div class="-mt-14 flex w-full flex-col items-center overflow-hidden">
+<div class="flex w-full flex-col items-center overflow-hidden">
 	<section class="flex-center relative min-h-screen w-full flex-col items-center justify-center">
 		<div class="pointer-events-none h-[60vh] w-full">
 			{#if loading}
@@ -83,9 +83,19 @@
 	</section>
 
 	<!-- grid section -->
-	<section class="relative flex w-full items-center overflow-hidden sm:my-[-2%] sm:max-w-[60vw]">
+	<section
+		class="relative flex flex-col w-full items-center overflow-hidden sm:my-[-2%] sm:max-w-[60vw]"
+	>
+		<div
+			class="container md:max-w-[60vw] max-w-[80vw] p-4 bg-white md:mt-[20vh] mt-[10vh] min-h-11 border-2 border-black pointer-events-none selectDisable"
+		>
+			<p class=" font-HCapsuleBlack font-black md:text-lg text-sm">
+				We are here as a full service agency and a team to back your next generation platform, dont
+				hesitate to reach out, happy to talk.
+			</p>
+		</div>
 		<button
-			class="absolute left-1/2 top-1/2 flex w-[80vw] -translate-x-1/2 -translate-y-1/2 transform justify-center rounded-lg border-2 border-blue bg-white p-4 font-black sm:w-[500px]"
+			class="absolute left-1/2 md:top-1/2 top-3/4 flex w-[80vw] -translate-x-1/2 -translate-y-1/2 transform justify-center rounded-lg border-2 border-blue bg-white p-4 font-black sm:w-[500px]"
 			on:click={presentForm}
 		>
 			Contact Us
