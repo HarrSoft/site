@@ -6,7 +6,14 @@ export default {
 			colors: {
 				white: '#EBF0F1',
         blue: '#6E85C4'
-			}
+			},
+			gridTemplateColumns: {
+        'project-grid': 'repeat(10, 50vw)',
+        'project-grid-mobile': 'repeat(10, 70vw)',
+      },
+			aspectRatio: {
+        'project-img': 'auto 960 / 540',
+      }
 		},
 		fontFamily: {
 			Roboto: ['Roboto'],

@@ -31,8 +31,8 @@
 			link: '/services'
 		},
 		{
-			title: 'Projects',
-			link: '/Projects'
+			title: 'How We Serve',
+			link: '/how-we-serve'
 		}
 	];
 </script>
@@ -48,7 +48,7 @@
 		<nav
 			aria-hidden={visible ? true : undefined}
 			aria-label="Main Navigation"
-			class="shadow-md sm:w-4/6 w-full sm:px-[6%] px-[3%] py-4 rounded-b-lg bg-blue flex flex-row justify-between"
+			class="shadow-md sm:w-4/6 w-full sm:px-[6%] px-[3%] border-b-2 border-white py-4 rounded-b-lg bg-blue flex flex-row justify-between"
 		>
 			{#each menuItems as menuItem}
 				<a
