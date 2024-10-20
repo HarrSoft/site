@@ -3,6 +3,7 @@
 	import grid from '$lib/gif/landinggif-harrsoft.gif';
 	import grid2 from '$lib/gif/landinggif2-harrsoft.gif';
 	import { onMount } from 'svelte';
+	import Contact from '$com/contact.svelte';
 	let isDown: boolean = false;
 	let offsetX: number = -2000;
 	let offsetY: number = -900;
@@ -66,6 +67,9 @@
 			for whats needed to make what you do real.
 			<br /><br /> The most important thing is to get started, that's what we are here for.
 		</p>
+		<div class="relative h-24 max-w-5 pointer-events-auto">
+			<Contact />
+		</div>
 	</div>
 	<div
 		bind:this={multiSlider}

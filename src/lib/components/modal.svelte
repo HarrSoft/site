@@ -60,7 +60,12 @@
 		transition:modalFade={{ duration: 400 }}
 	>
 		<div class="focused-content bg-blue flex-initial basis-4/5 h-4/5 overflow-y-hidden">
-			<button id="closer" aria-label="Close" on:click={close} class="absolute z-21">
+			<button
+				id="closer"
+				aria-label="Close"
+				on:click={close}
+				class="absolute z-21 font-HCapsuleBlack font-black"
+			>
 				Close <span aria-hidden="true">❌</span>
 			</button>
 			<slot></slot>
@@ -70,7 +75,7 @@
 
 <style scoped>
 	.focused-content {
-		box-shadow: 2px 2px 20px 1px rgb(59, 59, 124);
+		@apply bg-slate-300 rounded-md;
 	}
 	#closer {
 		top: 12%;

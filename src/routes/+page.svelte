@@ -7,6 +7,7 @@
 	import Modal from '$com/modal.svelte';
 	import { isModalOpen } from '$lib/stores/modal';
 	import { fadeScale } from '$lib/animations';
+	import Contact from '$com/contact.svelte';
 
 	// canvas
 	let canvas: HTMLCanvasElement;
@@ -15,13 +16,6 @@
 	// window
 	let height: number;
 	let width: number;
-
-	function presentForm() {
-		isModalOpen.set(true);
-	}
-	function hideForm() {
-		isModalOpen.set(false);
-	}
 
 	// dom functions
 	onMount(() => {
@@ -94,13 +88,7 @@
 				hesitate to reach out, happy to talk.
 			</p>
 		</div>
-		<button
-			class="absolute left-1/2 md:top-1/2 top-3/4 flex w-[80vw] -translate-x-1/2 -translate-y-1/2 transform justify-center rounded-lg border-2 border-blue bg-white p-4 font-black sm:w-[500px]"
-			on:click={presentForm}
-		>
-			Contact Us
-		</button>
-		<Modal on:close={hideForm}></Modal>
+		<Contact />
 		<enhanced:img class="w-[100vw]" src="../lib/images/grid.png" />
 	</section>
 
