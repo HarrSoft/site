@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>HarrSoft Studio</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="We Build." />
 </svelte:head>
 
 <div class="min-h-screen w-full bg-white {$isModalOpen ? 'pr-[17px]' : ''} overflow-x-clip">
