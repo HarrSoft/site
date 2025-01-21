@@ -34,13 +34,18 @@
 		<div class="pointer-events-none h-[60vh] w-full">
 			{#if loading}
 				<div
-					class="fixed left-0 top-0 z-[1000] grid min-h-screen min-w-screen place-items-center font-CapsuleSemiExpanded duration-500"
+					class="fixed left-0 top-0 z-[1000] grid min-h-screen bg-white min-w-screen place-items-center font-CapsuleSemiExpanded duration-500"
 					out:fade={{ duration: 400 }}
 				>
 					<p class="absolute self-center z-[10001] text-7xl font-HCapsuleBlack text-black">
 						loading
 					</p>
-					<img in:fade={{ duration: 100 }} src={loader} alt="loading" />
+					<img
+						in:fade={{ duration: 300 }}
+						out:fade={{ duration: 400 }}
+						src={loader}
+						alt="loading"
+					/>
 				</div>
 			{/if}
 			<canvas class="h-full w-full sm:scale-150" bind:this={canvas} />
