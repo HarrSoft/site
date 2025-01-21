@@ -35,7 +35,7 @@
 			{#if loading}
 				<div
 					class="fixed left-0 top-0 z-[1000] grid min-h-screen min-w-screen place-items-center font-CapsuleSemiExpanded duration-500"
-					out:fade={{ duration: 200 }}
+					out:fade={{ duration: 400 }}
 				>
 					<p class="absolute self-center z-[10001] text-7xl font-HCapsuleBlack text-black">
 						loading
