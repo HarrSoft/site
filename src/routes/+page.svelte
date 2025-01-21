@@ -40,7 +40,7 @@
 					<p class="absolute self-center z-[10001] text-7xl font-HCapsuleBlack text-black">
 						loading
 					</p>
-					<img src={loader} alt="loading" />
+					<img in:fade={{ duration: 100 }} src={loader} alt="loading" />
 				</div>
 			{/if}
 			<canvas class="h-full w-full sm:scale-150" bind:this={canvas} />
