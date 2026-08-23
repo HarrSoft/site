@@ -45,6 +45,11 @@
 	}
 </script>
 
+<svelte:window
+	on:keydown={(e) => {
+		if (e.key === 'Escape') close(e);
+	}}
+/>
 {#if $isModalOpen}
 	<div
 		id="modal-backdrop"
@@ -52,19 +57,16 @@
 		aria-modal="true"
 		aria-labelledby="modal-title"
 		on:click|self={close}
-		on:keydown={(e) => {
-			if (e.key === 'Escape') close(e);
-		}}
 		aria-hidden={!$isModalOpen}
-		class="fixed top-0 right-0 bottom-0 left-0 justify-center items-center bg-white bg-opacity-85 flex z-20"
+		class="fixed bottom-0 left-0 right-0 top-0 z-20 flex items-center justify-center bg-white bg-opacity-85"
 		transition:modalFade={{ duration: 400 }}
 	>
-		<div class="focused-content bg-blue flex-initial basis-4/5 h-4/5 overflow-y-hidden">
+		<div class="focused-content h-4/5 flex-initial basis-4/5 overflow-y-hidden bg-blue">
 			<button
 				id="closer"
 				aria-label="Close"
 				on:click={close}
-				class="absolute z-21 font-HCapsuleBlack font-black"
+				class="z-21 absolute font-HCapsuleBlack font-black"
 			>
 				Close <span aria-hidden="true">❌</span>
 			</button>
@@ -75,7 +77,7 @@
 
 <style scoped>
 	.focused-content {
-		@apply bg-slate-300 rounded-md;
+		@apply rounded-md bg-slate-300;
 	}
 	#closer {
 		top: 12%;
