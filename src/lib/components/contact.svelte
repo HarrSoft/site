@@ -12,7 +12,7 @@
 <div>
 	<button
 		class="flex w-[80vw] my-10 justify-center rounded-lg border-2 border-blue bg-white p-4 font-black sm:w-[500px]"
-		on:click={presentForm}
+		onclick={presentForm}
 	>
 		Contact Us
 	</button>
@@ -43,7 +43,7 @@
 				</div>
 				<div class="flex w-full">
 					<button type="submit" class="button">Book</button>
-					<button on:click={() => hideForm()} class="button">Cancel</button>
+					<button onclick={() => hideForm()} class="button">Cancel</button>
 				</div>
 				<div
 					style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;"

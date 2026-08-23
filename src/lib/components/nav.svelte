@@ -1,10 +1,10 @@
 <script setup lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { isModalOpen } from '$lib/stores/modal';
 
 	let lastScrollY = 0;
-	let visible = true;
+	let visible = $state(true);
 
 	const handleScroll = () => {
 		const currentScrollY = window.scrollY;
@@ -52,7 +52,7 @@
 		>
 			{#each menuItems as menuItem}
 				<a
-					aria-current={menuItem.link === $page.url.pathname ? 'page' : undefined}
+					aria-current={menuItem.link === page.url.pathname ? 'page' : undefined}
 					class={`sm:font-black sm:text-l sm:text-m text-white font-HCapsuleBlack  font-normal  text-sm`}
 					href={menuItem.link}
 				>

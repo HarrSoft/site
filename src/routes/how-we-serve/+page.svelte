@@ -7,9 +7,9 @@
 	let isDown: boolean = false;
 	let offsetX: number = -2000;
 	let offsetY: number = -900;
-	let bgX: number = 0;
-	let bgY: number = 0;
-	let multiSlider: HTMLElement;
+	let bgX: number = $state(0);
+	let bgY: number = $state(0);
+	let multiSlider: HTMLElement = $state();
 
 	onMount(() => {
 		const handleMouseMove = (e: MouseEvent) => {

@@ -3,7 +3,7 @@
 	import { fly, slide } from 'svelte/transition';
 	import { writable } from 'svelte/store';
 
-	let screenWidth: number;
+	let screenWidth: number = $state();
 	const serviceCategories = [
 		{
 			name: 'Development',
