@@ -6,14 +6,15 @@
 </script>
 
 <svelte:head>
-	<title>Votist</title>
-	<meta name="description" content="The Voting platform." />
+	<title>HarrSoft Studio</title>
+	<meta name="description" content="We Build." />
 </svelte:head>
 
 <div
 	transition:fade={{ duration: 200 }}
 	class="min-h-screen w-full bg-white {$isModalOpen ? 'pr-[17px]' : ''} overflow-x-clip"
 >
+	<Nav />
 	<main class="bg-white pt-14">
 		<slot />
 	</main>
