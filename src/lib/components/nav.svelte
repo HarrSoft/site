@@ -53,7 +53,7 @@
 			{#each menuItems as menuItem}
 				<a
 					aria-current={menuItem.link === page.url.pathname ? 'page' : undefined}
-					class={`sm:text-l sm:text-m font-[HCapsuleBlack] text-sm font-normal  text-white  sm:font-black`}
+					class={`sm:text-l sm:text-m font-capsule text-sm font-normal  text-white  sm:font-black`}
 					href={menuItem.link}
 				>
 					{menuItem.title}

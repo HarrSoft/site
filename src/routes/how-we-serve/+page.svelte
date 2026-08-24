@@ -9,7 +9,7 @@
 	let offsetY: number = -900;
 	let bgX: number = $state(0);
 	let bgY: number = $state(0);
-	let multiSlider: HTMLElement = $state();
+	let multiSlider: HTMLElement;
 
 	onMount(() => {
 		const handleMouseMove = (e: MouseEvent) => {
@@ -59,7 +59,7 @@
 	<div
 		class="selectDisable pointer-events-none z-20 container min-h-11 max-w-[80vw] border-2 border-black bg-white p-4 md:max-w-[60vw]"
 	>
-		<p class=" font-[HCapsuleBlack] text-sm font-black md:text-lg">
+		<p class=" font-capsule text-sm font-black md:text-lg">
 			All you have to do is convince us that you have a good idea, and that you believe in it enough
 			to let us help you succeed. <br />
 			<br /> We are open on willing to negotiate on how our partnership can be build.

@@ -3,7 +3,7 @@
 	import { fly, slide } from 'svelte/transition';
 	import { writable } from 'svelte/store';
 
-	let screenWidth: number = $state();
+	let screenWidth: number = $state(0);
 	const serviceCategories = [
 		{
 			name: 'Development',
@@ -210,22 +210,24 @@
 </div>
 
 <style scoped lang="postcss">
+	@reference "tailwindcss";
+	@reference "../../app.css";
 	.service-section {
 		@apply mt-[2vh] min-h-[98vh] w-full sm:grid sm:place-content-center;
 	}
 
 	p {
-		@apply mt-2 font-[Roboto];
+		@apply font-roboto mt-2;
 		font-size: 0.875rem;
 	}
 
 	h2 {
-		@apply mt-2 font-[HCapsuleBlack] font-black;
+		@apply font-capsule mt-2 font-black;
 		font-size: 1.25rem;
 	}
 
 	h3 {
-		@apply mt-2 font-[CapsuleSemiExpanded];
+		@apply font-capsule-exp mt-2;
 	}
 
 	.category-link {

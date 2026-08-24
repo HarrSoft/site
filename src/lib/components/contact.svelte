@@ -60,14 +60,14 @@
 	@reference "../../app.css";
 	.input,
 	.textarea {
-		@apply rounded-md border-2 border-slate-600 p-2 font-[Roboto] font-black text-black shadow-sm;
+		@apply font-roboto rounded-md border-2 border-slate-600 p-2 font-black text-black shadow-sm;
 	}
 
 	.button {
-		@apply mt-4 mr-4 rounded-md border-2 border-slate-600 bg-white px-3 py-1 font-[CapsuleSemiExpanded] text-black shadow-sm;
+		@apply font-capsule-exp mt-4 mr-4 rounded-md border-2 border-slate-600 bg-white px-3 py-1 text-black shadow-sm;
 	}
 
 	label {
-		@apply pt-1 font-[CapsuleSemiExpanded];
+		@apply font-capsule-exp pt-1;
 	}
 </style>

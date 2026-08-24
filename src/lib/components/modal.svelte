@@ -73,7 +73,7 @@
 				id="closer"
 				aria-label="Close"
 				onclick={close}
-				class="absolute z-21 font-[HCapsuleBlack] font-black"
+				class="font-capsule absolute z-21 font-black"
 			>
 				Close <span aria-hidden="true">❌</span>
 			</button>

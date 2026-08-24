@@ -1,7 +1,5 @@
 @import 'tailwindcss/preflight';
-
-@reference "tailwindcss";
-@tailwind utilities;
+@import 'tailwindcss';
 
 @layer utilities {
 	/* Hide scrollbar for Chrome, Safari and Opera */
@@ -39,6 +37,15 @@
 		font-style: normal;
 		font-display: swap;
 	}
+}
+
+@theme {
+	--color-white: #ebf0f1;
+	--color-blue: #6e85c4;
+
+	--font-roboto: 'Roboto';
+	--font-capsule: 'H74 Capsule';
+	--font-capsule-exp: 'H74 Capsule SemiExpanded';
 }
 
 .flex-center {
