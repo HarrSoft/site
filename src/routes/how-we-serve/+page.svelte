@@ -62,8 +62,7 @@
 		<p class=" font-[HCapsuleBlack] text-sm font-black md:text-lg">
 			All you have to do is convince us that you have a good idea, and that you believe in it enough
 			to let us help you succeed. <br />
-			<br /> We dont ask for anything upfront. We are open on willing to negotiate on how our
-			partnership can be build.
+			<br /> We are open on willing to negotiate on how our partnership can be build.
 			<br /><br /> The most important thing is to get started, that's what we are here for. We have pricing
 			models that are accessible for where you are at, helping you get where you want to be.
 		</p>
