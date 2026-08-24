@@ -49,7 +49,7 @@
 			<canvas class="h-full w-full sm:scale-150" bind:this={canvas}></canvas>
 		</div>
 		<div
-			class="border-blue text-blue font-capsule z-10 mt-0 flex flex-col border-x-0 border-t-2 px-5 leading-[2rem] sm:mx-0 sm:mt-6 sm:w-1/2 sm:max-w-[50vw] sm:border-x-2 sm:border-t-0 sm:px-[10%] sm:text-center md:mx-10"
+			class="border-blue text-blue font-capsule z-10 mt-0 flex flex-col border-x-0 border-t-2 px-5 leading-8 sm:mx-0 sm:mt-6 sm:w-1/2 sm:max-w-[50vw] sm:border-x-2 sm:border-t-0 sm:px-[10%] sm:text-center md:mx-10"
 		>
 			<h1 class="mt-10 text-xl font-black sm:mt-0">
 				Harrsoft is a Workers Cooperative building infrastructure we all want to live with.
