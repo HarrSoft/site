@@ -7,8 +7,8 @@
 	let isDown: boolean = false;
 	let offsetX: number = -2000;
 	let offsetY: number = -900;
-	let bgX: number = 0;
-	let bgY: number = 0;
+	let bgX: number = $state(0);
+	let bgY: number = $state(0);
 	let multiSlider: HTMLElement;
 
 	onMount(() => {
@@ -54,26 +54,25 @@
 </script>
 
 <div
-	class=" no-scrollbar w-screen h-screen fixed grid place-items-center overflow-clip top-0 left-0 z-10"
+	class=" no-scrollbar fixed top-0 left-0 z-10 grid h-screen w-screen place-items-center overflow-clip"
 >
 	<div
-		class="container md:max-w-[60vw] max-w-[80vw] p-4 bg-white z-20 min-h-11 border-2 border-black pointer-events-none selectDisable"
+		class="selectDisable pointer-events-none z-20 container min-h-11 max-w-[80vw] border-2 border-black bg-white p-4 md:max-w-[60vw]"
 	>
-		<p class=" font-HCapsuleBlack font-black md:text-lg text-sm">
+		<p class=" font-capsule text-sm font-black md:text-lg">
 			All you have to do is convince us that you have a good idea, and that you believe in it enough
 			to let us help you succeed. <br />
-			<br /> We dont ask for anything upfront. We are open on willing to negotiate on how our
-			partnership can be build.
+			<br /> We are open on willing to negotiate on how our partnership can be build.
 			<br /><br /> The most important thing is to get started, that's what we are here for. We have pricing
 			models that are accessible for where you are at, helping you get where you want to be.
 		</p>
-		<div class="relative h-24 max-w-5 pointer-events-auto">
+		<div class="pointer-events-auto relative h-24 max-w-5">
 			<Contact />
 		</div>
 	</div>
 	<div
 		bind:this={multiSlider}
-		class="grid w-fit duration-500 ease-in-out selectDisable h-fit min-h-screen min-w-screen md:grid-cols-project-grid grid-cols-project-grid-mobile absolute gap-[7vw] p-[10vw]"
+		class="selectDisable md:grid-cols-project-grid grid-cols-project-grid-mobile absolute grid h-fit min-h-screen w-fit min-w-screen gap-[7vw] p-[10vw] duration-500 ease-in-out"
 		style="
 			top: {bgY}px; ; left: {bgX}px;
 		"
@@ -81,7 +80,7 @@
 		{#each new Array(50) as _, i}
 			<img
 				src={i % 2 ? grid : grid2}
-				class="min-w-[10vw] pointer-events-none object-cover aspect-project-img h-[500px] py-[2vh] rounded-lg"
+				class="aspect-project-img pointer-events-none h-[500px] min-w-[10vw] rounded-lg object-cover py-[2vh]"
 				alt=""
 				style="scale: {i % 2 ? '1' : '.9'}; translate: transform({i % 2 ? '1' : '.9'}rem,{i % 2
 					? '1'

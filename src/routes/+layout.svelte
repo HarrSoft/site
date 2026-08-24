@@ -3,6 +3,11 @@
 	import Nav from '$com/nav.svelte';
 	import { isModalOpen } from '$lib/stores/modal';
 	import { fade } from 'svelte/transition';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 </script>
 
 <svelte:head>
@@ -16,6 +21,6 @@
 >
 	<Nav />
 	<main class="bg-white pt-14">
-		<slot />
+		{@render children?.()}
 	</main>
 </div>

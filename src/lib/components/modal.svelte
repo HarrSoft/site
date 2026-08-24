@@ -1,14 +1,21 @@
-<script setup lang="ts">
+<script lang="ts">
+	import { run, self } from 'svelte/legacy';
+
 	import { createEventDispatcher } from 'svelte';
 	import { isModalOpen } from '$lib/stores/modal';
 	import { cubicOut } from 'svelte/easing';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	const dispatch = createEventDispatcher();
 	function close(e: MouseEvent | KeyboardEvent) {
 		dispatch('close', e);
 	}
 
-	$: {
+	run(() => {
 		if (typeof document !== 'undefined' && $isModalOpen) {
 			const scrollY = `${window.scrollY}px`;
 			document.body.style.position = 'fixed';
@@ -27,7 +34,7 @@
 			}
 			window.scrollTo({ left: 0, top: parseInt(scrollY || '0') * -1, behavior: 'instant' });
 		}
-	}
+	});
 	function modalFade(node: HTMLElement, { delay = 0, duration = 700, easing = cubicOut }) {
 		return {
 			delay,
@@ -46,7 +53,7 @@
 </script>
 
 <svelte:window
-	on:keydown={(e) => {
+	onkeydown={(e) => {
 		if (e.key === 'Escape') close(e);
 	}}
 />
@@ -56,26 +63,27 @@
 		role="dialog"
 		aria-modal="true"
 		aria-labelledby="modal-title"
-		on:click|self={close}
+		onclick={self(close)}
 		aria-hidden={!$isModalOpen}
-		class="fixed bottom-0 left-0 right-0 top-0 z-20 flex items-center justify-center bg-white bg-opacity-85"
+		class="bg-opacity-85 fixed top-0 right-0 bottom-0 left-0 z-20 flex items-center justify-center bg-white"
 		transition:modalFade={{ duration: 400 }}
 	>
-		<div class="focused-content h-4/5 flex-initial basis-4/5 overflow-y-hidden bg-blue">
+		<div class="focused-content bg-blue h-4/5 flex-initial basis-4/5 overflow-y-hidden">
 			<button
 				id="closer"
 				aria-label="Close"
-				on:click={close}
-				class="z-21 absolute font-HCapsuleBlack font-black"
+				onclick={close}
+				class="font-capsule absolute z-21 font-black"
 			>
 				Close <span aria-hidden="true">❌</span>
 			</button>
-			<slot></slot>
+			{@render children?.()}
 		</div>
 	</div>
 {/if}
 
 <style scoped>
+	@reference "tailwindcss";
 	.focused-content {
 		@apply rounded-md bg-slate-300;
 	}
