@@ -1,5 +1,6 @@
-@tailwind base;
-@tailwind components;
+@import 'tailwindcss/preflight';
+
+@reference "tailwindcss";
 @tailwind utilities;
 
 @layer utilities {
@@ -53,7 +54,6 @@ html {
 body {
 	width: 100%;
 }
-
 
 .selectDisable {
 	-webkit-user-select: none;

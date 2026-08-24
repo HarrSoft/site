@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts">
 	import { run, self } from 'svelte/legacy';
 
 	import { createEventDispatcher } from 'svelte';
@@ -65,15 +65,15 @@
 		aria-labelledby="modal-title"
 		onclick={self(close)}
 		aria-hidden={!$isModalOpen}
-		class="fixed bottom-0 left-0 right-0 top-0 z-20 flex items-center justify-center bg-white bg-opacity-85"
+		class="bg-opacity-85 fixed top-0 right-0 bottom-0 left-0 z-20 flex items-center justify-center bg-white"
 		transition:modalFade={{ duration: 400 }}
 	>
-		<div class="focused-content h-4/5 flex-initial basis-4/5 overflow-y-hidden bg-blue">
+		<div class="focused-content bg-blue h-4/5 flex-initial basis-4/5 overflow-y-hidden">
 			<button
 				id="closer"
 				aria-label="Close"
 				onclick={close}
-				class="z-21 absolute font-HCapsuleBlack font-black"
+				class="absolute z-21 font-[HCapsuleBlack] font-black"
 			>
 				Close <span aria-hidden="true">❌</span>
 			</button>
@@ -83,6 +83,7 @@
 {/if}
 
 <style scoped>
+	@reference "tailwindcss";
 	.focused-content {
 		@apply rounded-md bg-slate-300;
 	}

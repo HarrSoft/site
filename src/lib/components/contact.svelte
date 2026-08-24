@@ -11,16 +11,16 @@
 
 <div>
 	<button
-		class="flex w-[80vw] my-10 justify-center rounded-lg border-2 border-blue bg-white p-4 font-black sm:w-[500px]"
+		class="border-blue my-10 flex w-[80vw] justify-center rounded-lg border-2 bg-white p-4 font-black sm:w-[500px]"
 		onclick={presentForm}
 	>
 		Contact Us
 	</button>
 	<Modal on:close={hideForm}>
-		<div class=" grid place-items-center h-full">
+		<div class=" grid h-full place-items-center">
 			<form
 				style="opacity: {isModalOpen ? 1 : 0}; transform: {isModalOpen ? 'scale(1)' : 'scale(0)'}"
-				class="duration-300 text-white bg-blue border-accent border-2 p-6 rounded-md flex justify-between min-w-[50%] flex-col max-h-[70vh] bottom-[16%] md:left-2"
+				class="bg-blue border-accent bottom-[16%] flex max-h-[70vh] min-w-[50%] flex-col justify-between rounded-md border-2 p-6 text-white duration-300 md:left-2"
 				action="https://public.herotofu.com/v1/326727e0-8f33-11ef-9c6a-57d55e63ff7c"
 				method="post"
 				accept-charset="UTF-8"
@@ -57,16 +57,17 @@
 </div>
 
 <style lang="postcss">
+	@reference "../../app.css";
 	.input,
 	.textarea {
-		@apply rounded-md font-Roboto border-2 border-slate-600 text-black font-black p-2 shadow-sm;
+		@apply rounded-md border-2 border-slate-600 p-2 font-[Roboto] font-black text-black shadow-sm;
 	}
 
 	.button {
-		@apply rounded-md font-CapsuleSemiExpanded bg-white text-black border-2 border-slate-600 shadow-sm mr-4 mt-4 px-3 py-1;
+		@apply mt-4 mr-4 rounded-md border-2 border-slate-600 bg-white px-3 py-1 font-[CapsuleSemiExpanded] text-black shadow-sm;
 	}
 
 	label {
-		@apply font-CapsuleSemiExpanded pt-1;
+		@apply pt-1 font-[CapsuleSemiExpanded];
 	}
 </style>

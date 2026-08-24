@@ -50,7 +50,7 @@
 <svelte:window bind:innerWidth={screenWidth} />
 <div class="sticky flex">
 	<div
-		class={`fixed left-0 top-0 flex h-screen flex-col justify-center bg-white p-2 sm:w-1/6 ${screenWidth < 500 ? 'hidden' : ''}`}
+		class={`fixed top-0 left-0 flex h-screen flex-col justify-center bg-white p-2 sm:w-1/6 ${screenWidth < 500 ? 'hidden' : ''}`}
 	>
 		<ul class=" ">
 			{#each serviceCategories as category}
@@ -70,7 +70,7 @@
 		</ul>
 	</div>
 
-	<div class="ml-0 mr-0 mt-16 p-4 sm:ml-[35%] sm:mr-[25%] sm:mt-0 sm:pt-0">
+	<div class="mt-16 mr-0 ml-0 p-4 sm:mt-0 sm:mr-[25%] sm:ml-[35%] sm:pt-0">
 		<section id="Development" class="service-section" in:fly={{ y: 200, duration: 300 }}>
 			<h2>Development</h2>
 
@@ -215,17 +215,17 @@
 	}
 
 	p {
-		@apply mt-2 font-Roboto;
+		@apply mt-2 font-[Roboto];
 		font-size: 0.875rem;
 	}
 
 	h2 {
-		@apply mt-2 font-HCapsuleBlack font-black;
+		@apply mt-2 font-[HCapsuleBlack] font-black;
 		font-size: 1.25rem;
 	}
 
 	h3 {
-		@apply mt-2 font-CapsuleSemiExpanded;
+		@apply mt-2 font-[CapsuleSemiExpanded];
 	}
 
 	.category-link {

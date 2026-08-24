@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts">
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
 	import { isModalOpen } from '$lib/stores/modal';
@@ -40,20 +40,20 @@
 <div
 	role="navigation"
 	aria-label="Main Navigation"
-	class={`top-bar fixed left-0 w-screen top-0 h-max z-20
-	flex justify-center 
+	class={`top-bar fixed top-0 left-0 z-20 flex h-max
+	w-screen justify-center 
 	transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}
 >
-	<div class="sm:w-5/6 w-full flex justify-center">
+	<div class="flex w-full justify-center sm:w-5/6">
 		<nav
 			aria-hidden={visible ? true : undefined}
 			aria-label="Main Navigation"
-			class="shadow-md sm:w-4/6 w-full sm:px-[6%] px-[3%] border-b-2 border-white py-4 rounded-b-lg bg-blue flex flex-row justify-between"
+			class="bg-blue flex w-full flex-row justify-between rounded-b-lg border-b-2 border-white px-[3%] py-4 shadow-md sm:w-4/6 sm:px-[6%]"
 		>
 			{#each menuItems as menuItem}
 				<a
 					aria-current={menuItem.link === page.url.pathname ? 'page' : undefined}
-					class={`sm:font-black sm:text-l sm:text-m text-white font-HCapsuleBlack  font-normal  text-sm`}
+					class={`sm:text-l sm:text-m font-[HCapsuleBlack] text-sm font-normal  text-white  sm:font-black`}
 					href={menuItem.link}
 				>
 					{menuItem.title}
