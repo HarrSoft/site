@@ -33,6 +33,10 @@
 		{
 			title: 'How We Serve',
 			link: '/how-we-serve'
+		},
+		{
+			title: 'Library',
+			link: '/library'
 		}
 	];
 </script>
