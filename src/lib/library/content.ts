@@ -1,3 +1,4 @@
+import singerChat from './peter-singer-ai-chat.md?raw';
 import singers from './singers-principle.md?raw';
 import sentence from './the-sentence.md?raw';
 import standard from './hosting-standard.md?raw';
@@ -60,3 +61,12 @@ export const libraryItems: LibraryItem[] = [
 		body: practice
 	}
 ];
+
+export const referenceChat: LibraryItem = {
+	slug: 'peter-singer-ai-chat',
+	title: "One Chat with Peter Singer's AI",
+	kicker: 'The chat',
+	blurb:
+		"Peter Singer's ethics were immortalized into a Chatbase AI interface, powered by an LLM and RAG database of his work. Lavra engaged him rigorously ",
+	body: singerChat
+};
