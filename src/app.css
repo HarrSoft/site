@@ -43,8 +43,8 @@
 	--color-blue: #6e85c4;
 
 	--font-roboto: 'Roboto';
-	--font-capsule: 'H74 Capsule';
-	--font-capsule-exp: 'H74 Capsule SemiExpanded';
+	--font-capsule: 'H74 Capsule', 'Roboto', sans-serif;
+	--font-capsule-exp: 'H74 Capsule SemiExpanded', 'Roboto', sans-serif;
 }
 
 .flex-center {
