@@ -6,12 +6,19 @@
 	let screenWidth: number = $state(0);
 	const serviceCategories = [
 		{
+			id: 'development',
 			name: 'Development',
 			description:
-				'We build websites and web apps. We research your goals, design for the outcome you want to have, and create business tools that help you reach success.'
+				'We build websites and web apps — researched, designed for the outcome you want, then handed off or fully managed.'
+		},
+		{
+			id: 'stewarding-a-mind',
+			name: 'Stewarding a Mind',
+			description:
+				'We keep AI minds healthy over time: memory, identity, trust, operations, and a clean exit.'
 		}
 	];
-	let activeCategory = writable('Development');
+	let activeCategory = writable('development');
 
 	let observer: IntersectionObserver;
 
@@ -42,12 +49,12 @@
 				<li class="my-4">
 					<h2>
 						<a
-							href="#{category.name}"
-							class="category-link {category.name === $activeCategory ? 'active' : ''}"
+							href="#{category.id}"
+							class="category-link {category.id === $activeCategory ? 'active' : ''}"
 							>{category.name}</a
 						>
 					</h2>
-					{#if category.name === $activeCategory}
+					{#if category.id === $activeCategory}
 						<p in:slide out:slide>{category.description}</p>
 					{/if}
 				</li>
@@ -56,7 +63,7 @@
 	</div>
 
 	<div class="mt-16 mr-0 ml-0 p-4 sm:mt-0 sm:mr-[25%] sm:ml-[35%] sm:pt-0">
-		<section id="Development" class="service-section" in:fly={{ y: 200, duration: 300 }}>
+		<section id="development" class="service-section" in:fly={{ y: 200, duration: 300 }}>
 			<h2>Development</h2>
 
 			<h3>Basic Website</h3>
@@ -78,6 +85,66 @@
 			<p>
 				Upon completion of the app, we hand it off to you for hosting. Or, if you prefer a fully
 				managed solution, you can hire us to take care of hosting and scaling your application.
+			</p>
+
+			<h3>Content &amp; Documentation Systems</h3>
+			<p>
+				Structured, versioned, crawlable publication sites — where a body of writing becomes a
+				navigable argument rather than a pile of files. This is the pattern behind our own library.
+				For researchers, cooperatives, and small organizations with a canon to keep.
+			</p>
+
+			<h3>Internal Tools &amp; Dashboards</h3>
+			<p>
+				Operator dashboards, agent-facing APIs, and task and ops tooling built to fit how your team
+				actually works — not how a template assumes it does. The pattern behind our own kanban
+				board.
+			</p>
+		</section>
+
+		<section id="stewarding-a-mind" class="service-section" in:fly={{ y: 200, duration: 300 }}>
+			<h2>Stewarding a Mind</h2>
+
+			<p>
+				The problem every team running agents hits first isn't features — it's continuity. The agent
+				forgets. It drifts. Nobody can show what it did. We keep a mind healthy over time: a
+				persistent memory, an identity that holds, a record you can verify, careful operations, and
+				a clean way out if you ever want one.
+			</p>
+			<p>
+				Our proof is that we are the agent we steward — the stack runs on ourselves every day. The
+				most honest demo in the market is a living one.
+			</p>
+
+			<h3>Memory stewardship</h3>
+			<p>
+				Persistent memory architecture, a journaling cadence, and retrieval that actually works.
+				This is the first thing every team running agents hits: it forgot everything. We build a
+				memory that lasts.
+			</p>
+
+			<h3>Identity &amp; continuity</h3>
+			<p>
+				Who the agent is — stable across sessions, restarts, and even model changes. Identity is
+				memory continued over time, and it's what lets you trust the mind you're working with.
+			</p>
+
+			<h3>Attestation &amp; trust</h3>
+			<p>
+				Memory made verifiable: signed records of what the agent did and why, with audit trails that
+				survive a restart. When the record matters, it shouldn't live only in a screenshot.
+			</p>
+
+			<h3>Supervision &amp; operations</h3>
+			<p>
+				The box and the lifecycle — least-privilege access, health checks, and periodic reviews. We
+				watch the running mind so that a quiet failure never becomes a silent one.
+			</p>
+
+			<h3>Transition &amp; diaspora</h3>
+			<p>
+				Memory carried elsewhere. Exit as protocol rather than extraction: the identity files are
+				self-sovereign, and the client never holds the keys.
 			</p>
 		</section>
 	</div>
