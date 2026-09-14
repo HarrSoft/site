@@ -45,10 +45,11 @@
 	role="navigation"
 	aria-label="Main Navigation"
 	class={`top-bar fixed top-0 left-0 z-20 flex h-max
-	w-screen justify-center 
-	transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}
+	w-screen justify-center `}
 >
-	<div class="flex w-full justify-center sm:w-5/6">
+	<div
+		class={`absolute flex w-full justify-center transition-transform duration-300 sm:w-5/6 ${visible ? 'translate-y-0' : '-translate-y-full'}`}
+	>
 		<nav
 			aria-hidden={visible ? true : undefined}
 			aria-label="Main Navigation"
@@ -66,9 +67,3 @@
 		</nav>
 	</div>
 </div>
-
-<style scoped>
-	.top-bar {
-		transition: transform 0.3s ease;
-	}
-</style>
