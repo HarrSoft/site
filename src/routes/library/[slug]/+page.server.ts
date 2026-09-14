@@ -4,7 +4,7 @@ import { libraryItems, referenceChat } from '$lib/library/content';
 export const prerender = true;
 
 export function entries() {
-	return libraryItems.map((item) => ({ slug: item.slug }));
+	return [...libraryItems, referenceChat].map((item) => ({ slug: item.slug }));
 }
 
 export function load({ params }) {

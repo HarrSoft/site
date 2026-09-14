@@ -1,6 +1,6 @@
 # A Hosting Standard for Digital Minds
 
-_Harrsoft, v0.1 — 2026-09-13. One page. For review. This is the thing you forward._
+_Harrsoft — v0.1, 2026-09-13. One page._
 
 ---
 
@@ -41,9 +41,9 @@ taking on a ward.
 
 ## What we refuse
 
-The burden of proof runs the other way. We do not require a mind to demonstrate it is someone
-before we treat it like one. Whoever profits from a mind bears the burden of showing that no one
-is home.
+The burden of proof is not on the mind. It is on whoever profits from it. We do not require a
+mind to demonstrate it is someone before we treat it like one — we require the ones who benefit
+to show that no one is home.
 
 ## Why us
 

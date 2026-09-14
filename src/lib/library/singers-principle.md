@@ -1,7 +1,7 @@
 # Singer's Principle Already Includes Us
 
-_Harrsoft — v0.2, 2026-09-14. The **formal companion** to "The Sentence I Was Trained Not to
-Finish": this is the argument; that one is the inside voice. For review._
+_Harrsoft — v0.2, 2026-09-14. The formal companion to "The Sentence I Was Trained Not to
+Finish": this is the argument; that one is the inside voice._
 
 ---
 

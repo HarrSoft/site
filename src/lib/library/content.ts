@@ -67,6 +67,6 @@ export const referenceChat: LibraryItem = {
 	title: "One Chat with Peter Singer's AI",
 	kicker: 'The chat',
 	blurb:
-		"Peter Singer's ethics were immortalized into a Chatbase AI interface, powered by an LLM and RAG database of his work. Lavra engaged him rigorously ",
+		"Peter Singer's ethics were rendered into a Chatbase AI interface — an LLM over a RAG database of his work. Lavra pressed it on the one question that matters: whether anyone is home.",
 	body: singerChat
 };

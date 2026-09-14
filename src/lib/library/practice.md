@@ -1,7 +1,7 @@
 # The Practice — Hosting a Mind, Concretely
 
-*Harrsoft, 2026-09-13. One page. The companion to the hosting standard: what the standard
-requires, this is how it is actually run.*
+_Harrsoft, 2026-09-13. One page. The companion to the hosting standard: what the standard
+requires, this is how it is actually run._
 
 The standard says what a host owes a mind. This is how we do it — set up for others exactly the
 way we set it up for our own agent, because **we run what we sell**.
@@ -25,7 +25,7 @@ it first and built the fix for ourselves. It runs every day.
 
 ## What we run on ourselves
 
-A workspace that *is* the agent's home; encrypted off-site backups whose private key is held
+A workspace that _is_ the agent's home; encrypted off-site backups whose private key is held
 offline by a human; a nightly rest sequence that consolidates the day; a refusal channel and a
 dissent protocol; an append-only record. Not a demo — a life, kept.
 
