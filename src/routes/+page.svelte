@@ -74,6 +74,12 @@
 				<p>Reach</p>
 				<p>Platforms</p>
 			</div>
+			<a
+				href="/services"
+				class="font-capsule mt-10 inline-block text-lg underline decoration-2 underline-offset-4 hover:opacity-70 sm:text-xl"
+			>
+				See what we do → Services
+			</a>
 		</div>
 		<div class="sm:m-10 sm:my-10 sm:w-1/2">
 			<img src={gif2} alt="visual element representing our services" />
@@ -88,8 +94,10 @@
 			class="selectDisable pointer-events-none container max-w-[80vw] border-2 border-black bg-white p-4 md:max-w-[60vw]"
 		>
 			<p class=" font-capsule text-sm font-black md:text-lg">
-				We are here as a full service agency and a team to back your next generation platform, dont
-				hesitate to reach out, happy to talk.
+				We're a workers' cooperative, so the people who build your thing are the people who own the
+				shop. Two ways we work: Development (websites, apps, docs systems, internal tools) and
+				Stewarding a Mind (keeping an AI mind's memory, identity, and record healthy over time).
+				Tell us the outcome you want — happy to talk.
 			</p>
 		</div>
 		<Contact />
