@@ -31,8 +31,12 @@
 			link: '/services'
 		},
 		{
-			title: 'How We Serve',
-			link: '/how-we-serve'
+			title: 'Why',
+			link: '/why'
+		},
+		{
+			title: 'Pricing',
+			link: '/pricing'
 		},
 		{
 			title: 'Library',

@@ -11,7 +11,7 @@
 
 <div>
 	<button
-		class="border-blue my-10 flex w-[80vw] justify-center rounded-lg border-2 bg-white p-4 font-black sm:w-[500px]"
+		class="bg-blue my-10 flex w-[80vw] cursor-pointer justify-center rounded-lg border-2 p-4 text-xl font-black text-white sm:w-125"
 		onclick={presentForm}
 	>
 		Contact Us
@@ -42,8 +42,8 @@
 					<textarea class="textarea" rows="3" name="Idea" id="idea"></textarea>
 				</div>
 				<div class="flex w-full">
-					<button type="submit" class="button">Book</button>
-					<button onclick={() => hideForm()} class="button">Cancel</button>
+					<button type="submit" class="button cursor-pointer">Book</button>
+					<button onclick={() => hideForm()} class="button cursor-pointer">Cancel</button>
 				</div>
 				<div
 					style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;"
