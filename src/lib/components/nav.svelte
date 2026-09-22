@@ -35,6 +35,10 @@
 			link: '/why'
 		},
 		{
+			title: 'Pricing',
+			link: '/pricing'
+		},
+		{
 			title: 'Library',
 			link: '/library'
 		}
