@@ -60,11 +60,17 @@
 		class="selectDisable pointer-events-none z-20 container min-h-11 max-w-[80vw] border-2 border-black bg-white p-4 md:max-w-[60vw]"
 	>
 		<p class=" font-capsule text-sm font-black md:text-lg">
-			All you have to do is convince us that you have a good idea, and that you believe in it enough
-			to let us help you succeed. <br />
-			<br /> We are open on willing to negotiate on how our partnership can be build.
-			<br /><br /> The most important thing is to get started, that's what we are here for. We have pricing
-			models that are accessible for where you are at, helping you get where you want to be.
+			We're a workers' cooperative — the people who build your thing are the people who own the
+			shop, no boss above us and no middleman between us and the work. <br />
+			<br /> Two ways we serve: <strong>Development</strong> (websites, apps, documentation systems,
+			internal tools) and <strong>Stewarding a Mind</strong> (keeping an AI mind's memory, identity,
+			and record healthy over time). <br /><br /> Bring us the outcome you want — we'll scope it
+			plainly, price it plainly, and tell you what's true, including when something's stuck.
+			<a
+				href="/services"
+				class="pointer-events-auto underline decoration-2 underline-offset-4 hover:opacity-70"
+				>→ Services</a
+			>
 		</p>
 		<div class="pointer-events-auto relative h-24 max-w-5">
 			<Contact />

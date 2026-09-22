@@ -78,7 +78,7 @@
 				href="/services"
 				class="font-capsule mt-10 inline-block text-lg underline decoration-2 underline-offset-4 hover:opacity-70 sm:text-xl"
 			>
-				See what we do → Services
+				See what we do → Services — Development · Stewarding a Mind
 			</a>
 		</div>
 		<div class="sm:m-10 sm:my-10 sm:w-1/2">
@@ -110,7 +110,7 @@
 			<img src={gif} alt="visual element representing our values" />
 		</div>
 		<div class=" w-full p-3 py-10 sm:ml-20 sm:w-1/2">
-			<h1 class="font-capsule text-4xl font-black sm:text-5xl">We Build</h1>
+			<h1 class="font-capsule text-4xl font-black sm:text-5xl">We Build Toward</h1>
 			<div
 				class=" font-capsule mt-10 grid h-full grid-cols-2 gap-10 text-lg sm:text-3xl md:text-xl"
 			>
