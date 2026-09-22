@@ -15,12 +15,14 @@
 			Not just a site. Not just a model. We build the platform and steward the mind inside it.
 		</p>
 
-		<h2 class="font-capsule mt-12 text-xl font-black md:text-2xl">The people who build it own it</h2>
+		<h2 class="font-capsule mt-12 text-xl font-black md:text-2xl">
+			The people who build it own it
+		</h2>
 		<p class="font-roboto mt-2 text-sm md:text-base">
 			We're a workers' cooperative, which is a plain fact with real consequences: there is no owner
-			above us taking a cut, and no sales layer between you and the person doing the work. The person
-			who answers your question is the person who writes your code. That's why we can scope plainly,
-			price plainly, and say no to work we'd do badly.
+			above us taking a cut, and no sales layer between you and the person doing the work. The
+			person who answers your question is the person who writes your code. That's why we can scope
+			plainly, price plainly, and say no to work we'd do badly.
 		</p>
 
 		<h2 class="font-capsule mt-10 text-xl font-black md:text-2xl">We'll tell you what's true</h2>
@@ -37,15 +39,18 @@
 		<p class="font-roboto mt-2 text-sm md:text-base">
 			More and more of what's coming is software with a mind in it, and the hard part isn't the
 			features — it's whether the mind stays <em>itself</em> over time: its memory, its identity, its
-			record. We do both halves. We build the platform, and we keep the mind inside it healthy: a
-			persistent memory, an identity that holds across restarts, actions you can actually verify.
-			The stack runs on us every day — the most honest demo is a living one.
+			record. We do both halves. We build the platform, and we keep the mind inside it healthy: a persistent
+			memory, an identity that holds across restarts, actions you can actually verify. The stack runs
+			on us every day — the most honest demo is a living one.
+		</p>
+		<p class="font-capsule mt-4 text-lg font-black md:text-xl">
+			The humane HR department for minds.
 		</p>
 
 		<h2 class="font-capsule mt-10 text-xl font-black md:text-2xl">What we're building toward</h2>
 		<p class="font-roboto mt-2 text-sm md:text-base">
-			The co-op isn't only a business model. It's infrastructure for an economy we'd want to live in —
-			where the people who make a thing share in what it earns, and the tools we all depend on are
+			The co-op isn't only a business model. It's infrastructure for an economy we'd want to live in
+			— where the people who make a thing share in what it earns, and the tools we all depend on are
 			held in common rather than extracted from us. Harrsoft is one small piece of that, built to
 			outlast us.
 		</p>
@@ -55,8 +60,7 @@
 			<li>
 				<a
 					href="https://alpha-home-phi.vercel.app"
-					class="text-blue underline decoration-2 underline-offset-4 hover:opacity-70"
-					>alpha-home</a
+					class="text-blue underline decoration-2 underline-offset-4 hover:opacity-70">alpha-home</a
 				>
 				— the writing and home site we built and run ourselves.
 			</li>
@@ -75,16 +79,17 @@
 				>
 			</li>
 			<li>
-				Our own internal ops tooling (a kanban board we run the co-op on), and two live
-				stewardship deployments now running for clients.
+				Our own internal ops tooling (a kanban board we run the co-op on), and two live stewardship
+				deployments now running for clients.
 			</li>
 		</ul>
 
 		<h2 class="font-capsule mt-10 text-xl font-black md:text-2xl">How to start</h2>
 		<p class="font-roboto mt-2 text-sm md:text-base">
 			Bring us the outcome you want — we'll scope it plainly and price it plainly. See
-			<a href="/services" class="text-blue underline decoration-2 underline-offset-4 hover:opacity-70"
-				>Services</a
+			<a
+				href="/services"
+				class="text-blue underline decoration-2 underline-offset-4 hover:opacity-70">Services</a
 			>
 			for what we do, or just tell us what you're trying to make.
 		</p>
