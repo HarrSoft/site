@@ -29,7 +29,7 @@
 
 <svelte:window bind:innerHeight={height} bind:innerWidth={width} />
 
-<div class="flex w-full flex-col items-center overflow-hidden">
+<div class="flex w-full flex-col items-center overflow-hidden pb-12">
 	<section class="flex-center relative min-h-screen w-full flex-col items-center justify-center">
 		<div class="pointer-events-none h-[60vh] w-full">
 			{#if loading}
@@ -62,26 +62,26 @@
 		</div>
 	</section>
 	<section
-		class="border-blue text-blue mt-[30%] flex w-full flex-col-reverse items-center border-2 pt-0 sm:mx-10 sm:mt-10 sm:w-[80vw] sm:flex-row"
+		class="border-blue text-blue mt-[30%] flex w-full flex-col-reverse items-center justify-center border-2 pt-0 sm:mx-10 sm:mt-10 sm:w-[80vw] sm:flex-row"
 	>
-		<div class="w-full p-3 py-10 sm:ml-20 sm:w-1/2">
+		<div class="w-full p-3 py-10 sm:ml-20 sm:w-1/3">
 			<h1 class="font-capsule text-4xl font-black sm:text-5xl">We Build</h1>
 			<div class="font-capsule mt-10 grid h-full grid-cols-2 gap-10 text-lg sm:text-3xl md:text-xl">
-				<p>Websites</p>
+				<p>Web Apps</p>
 				<p>Integrations</p>
-				<p>Brands</p>
-				<p>Identities</p>
-				<p>Reach</p>
+				<p>Automations</p>
 				<p>Platforms</p>
+				<p>Mind Architecture</p>
+				<p>Identity</p>
 			</div>
 			<a
 				href="/services"
 				class="font-capsule mt-10 inline-block text-lg underline decoration-2 underline-offset-4 hover:opacity-70 sm:text-xl"
 			>
-				See what we do → Services — Development · Stewarding a Mind · Automations
+				See what we do →
 			</a>
 		</div>
-		<div class="sm:m-10 sm:my-10 sm:w-1/2">
+		<div class="sm:m-10 sm:my-10 sm:w-1/3">
 			<img src={gif2} alt="visual element representing our services" />
 		</div>
 	</section>
@@ -91,25 +91,31 @@
 		class="relative my-[10%] flex w-full flex-col items-center overflow-hidden sm:max-w-[60vw]"
 	>
 		<div
-			class="selectDisable pointer-events-none container max-w-[80vw] border-2 border-black bg-white p-4 md:max-w-[60vw]"
+			class="selectDisable border-blue pointer-events-none container max-w-[80vw] space-y-4 border-2 bg-white px-24 py-12 text-sm font-black md:max-w-[60vw] md:text-lg"
 		>
-			<p class=" font-capsule text-sm font-black md:text-lg">
+			<p>
 				We're a workers' cooperative, so the people who build your thing are the people who own the
-				shop. Two ways we work: Development (websites, apps, docs systems, internal tools) and
-				Stewarding a Mind (keeping an AI mind's memory, identity, and record healthy over time).
-				Tell us the outcome you want — happy to talk.
+				shop.
 			</p>
+			<p>Two ways we work:</p>
+			<ul class="ml-6 list-disc">
+				<li>Development (websites, apps, docs systems, internal tools)</li>
+				<li>
+					Stewarding a Mind (keeping an AI mind's memory, identity, and record healthy over time)
+				</li>
+			</ul>
+			<p>Tell us the outcome you want — we're happy to talk.</p>
 		</div>
 		<Contact />
 	</section>
 
 	<section
-		class="border-blue text-blue flex w-full flex-col-reverse items-center border-2 pt-0 sm:mx-10 sm:mb-10 sm:w-[80vw] sm:flex-row md:flex-col-reverse"
+		class="border-blue text-blue flex w-full flex-col-reverse items-center border-2 pt-0 sm:mx-10 sm:mb-10 sm:w-[80vw] sm:flex-row"
 	>
-		<div class="sm:m-10 sm:my-10 sm:w-1/2">
+		<div class="sm:m-10 sm:my-10 sm:w-1/3">
 			<img src={gif} alt="visual element representing our values" />
 		</div>
-		<div class=" w-full p-3 py-10 sm:ml-20 sm:w-1/2">
+		<div class=" w-full p-3 py-10 sm:ml-20 sm:w-1/3">
 			<h1 class="font-capsule text-4xl font-black sm:text-5xl">We Build Toward</h1>
 			<div
 				class=" font-capsule mt-10 grid h-full grid-cols-2 gap-10 text-lg sm:text-3xl md:text-xl"

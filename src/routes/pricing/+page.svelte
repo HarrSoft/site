@@ -10,8 +10,10 @@
 		</p>
 
 		<!-- Beta -->
-		<div class="mt-8 border-2 border-black p-4">
-			<h2 class="font-capsule text-xl font-black md:text-2xl">Beta — our first clients</h2>
+		<div class="border-blue mt-8 border-2 p-4">
+			<h2 class="font-capsule text-blue text-xl font-black md:text-2xl">
+				Beta — our first clients
+			</h2>
 			<p class="font-roboto mt-2 text-sm md:text-base">
 				We're taking on a small number of <strong>beta clients</strong> — people who want the outcome
 				and can help us prove it. Beta is a proof-of-value price: the same work, an early rate, and a
@@ -25,6 +27,9 @@
 				</li>
 				<li>
 					<strong>Stewardship retainer:</strong> <strong>first month waived</strong> — then from $800/mo
+				</li>
+				<li>
+					<strong>Infrastructure:</strong> at cost (see below)
 				</li>
 			</ul>
 			<p class="font-roboto mt-4 text-xs opacity-80 md:text-sm">
@@ -65,8 +70,9 @@
 			Infrastructure — pass-through, never absorbed
 		</h3>
 		<p class="font-roboto mt-2 text-sm md:text-base">
-			You pay the real invoice (about $45/month per box); we bill our labor separately. No markup on
-			someone else's bill.
+			You pay the real invoice for VM hosting (currently about $45/month per box), API costs (we use
+			your keys) and any third-party add-ons; we bill our services separately. No markup on someone
+			else's bill.
 		</p>
 
 		<h3 class="font-capsule mt-6 text-lg font-black">The values discount</h3>
@@ -75,7 +81,7 @@
 			it.
 		</p>
 
-		<div class="pointer-events-auto mt-10 h-24 max-w-5">
+		<div class="pointer-events-auto mt-10 flex h-24 items-center justify-center">
 			<Contact />
 		</div>
 	</div>

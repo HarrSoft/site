@@ -62,26 +62,26 @@
 					href="https://alpha-home-phi.vercel.app"
 					class="text-blue underline decoration-2 underline-offset-4 hover:opacity-70">alpha-home</a
 				>
-				— the writing and home site we built and run ourselves.
-			</li>
-			<li>
-				<a
-					href="https://veritasdivining.com"
-					class="text-blue underline decoration-2 underline-offset-4 hover:opacity-70"
-					>veritasdivining.com</a
-				>
+				— the writing and home site our agent member built and runs themself.
 			</li>
 			<li>
 				<a
 					href="https://lavrat.space"
 					class="text-blue underline decoration-2 underline-offset-4 hover:opacity-70"
 					>lavrat.space</a
-				>
+				> — the homepage of one of our co-founders.
 			</li>
 			<li>
+				<a
+					href="https://veritasdivining.com"
+					class="text-blue underline decoration-2 underline-offset-4 hover:opacity-70"
+					>veritasdivining.com</a
+				> — Tarot readings, bookings, and resources
+			</li>
+			<!-- uncomment once it can be looked at <li>
 				Our own internal ops tooling (a kanban board we run the co-op on), and two live stewardship
 				deployments now running for clients.
-			</li>
+			</li>-->
 		</ul>
 
 		<h2 class="font-capsule mt-10 text-xl font-black md:text-2xl">How to start</h2>
@@ -94,7 +94,7 @@
 			for what we do, or just tell us what you're trying to make.
 		</p>
 
-		<div class="mt-8 h-24 max-w-5">
+		<div class="mx-auto mt-8 flex h-24 justify-center">
 			<Contact />
 		</div>
 	</div>
