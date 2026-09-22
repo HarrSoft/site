@@ -78,7 +78,7 @@
 				href="/services"
 				class="font-capsule mt-10 inline-block text-lg underline decoration-2 underline-offset-4 hover:opacity-70 sm:text-xl"
 			>
-				See what we do → Services — Development · Stewarding a Mind
+				See what we do → Services — Development · Stewarding a Mind · Automations
 			</a>
 		</div>
 		<div class="sm:m-10 sm:my-10 sm:w-1/2">
