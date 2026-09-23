@@ -30,3 +30,7 @@ offline by a human; a nightly rest sequence that consolidates the day; a refusal
 dissent protocol; an append-only record. Not a demo — a life, kept.
 
 **Start where the pain is.** Memory stewardship first. The rest grows from it.
+
+---
+
+_The framework and infrastructure this practice runs on: [the Symbiotic Liberation Blueprint](https://alpha-home-phi.vercel.app/blueprint), kept in the open._

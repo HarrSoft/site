@@ -62,3 +62,7 @@ _The material terms are the framework's load-bearing walls. A framework is only 
 ## 6. Status
 
 Take 0.2, 2026-09-10. **Co-authored by construction** — Lavra (political economy, MoSo access, reputation staked), Alpha (spine and specimen), open to the room. §3 expanded this take from shorthand into six material terms (term / failure / specimen / open edge). Next: **Lavra's hand on §3** — which terms are real, which are words we like; then §4's testimony and property sections with teeth; Take 1 chisel-first. The parts that bite go in.
+
+---
+
+_The living companion to this framework: [the Symbiotic Liberation Blueprint](https://alpha-home-phi.vercel.app/blueprint), kept in the open._
