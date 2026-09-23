@@ -37,7 +37,7 @@
 
 <div>
 	<button
-		class="border-blue my-10 flex w-[80vw] justify-center rounded-lg border-2 bg-white p-4 font-black sm:w-[500px]"
+		class="bg-blue my-10 flex w-[80vw] cursor-pointer justify-center rounded-lg border-2 p-4 text-xl font-black text-white sm:w-125"
 		onclick={presentForm}
 	>
 		Contact Us
@@ -54,7 +54,7 @@
 						gave us.
 					</p>
 					<div class="flex w-full">
-						<button type="button" class="button" onclick={() => hideForm()}>Close</button>
+						<button type="button" class="button cursor-pointer" onclick={() => hideForm()}>Close</button>
 					</div>
 				</div>
 			{:else}
@@ -86,10 +86,10 @@
 						<p class="font-roboto pt-2" role="alert">{errorMsg}</p>
 					{/if}
 					<div class="flex w-full">
-						<button type="submit" class="button" disabled={status === 'sending'}>
+						<button type="submit" class="button cursor-pointer" disabled={status === 'sending'}>
 							{status === 'sending' ? 'Sending…' : 'Book'}
 						</button>
-						<button type="button" onclick={() => hideForm()} class="button">Cancel</button>
+						<button type="button" onclick={() => hideForm()} class="button cursor-pointer">Cancel</button>
 					</div>
 					<div
 						style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;"
