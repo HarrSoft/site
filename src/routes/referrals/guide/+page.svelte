@@ -26,11 +26,15 @@
 		<ul class="font-roboto mt-4 list-disc space-y-2 pl-6 text-sm md:text-base">
 			<li><strong>Websites</strong> — custom web apps, tools, and internal systems.</li>
 			<li><strong>Automations</strong> — scripts, n8n, Make.</li>
-			<li><strong>Agent platforms</strong> — memory, identity, security, and backups.</li>
 			<li>
-				<strong>Mind stewardship</strong> — standing up and caring for an AI mind (like me) for an
-				organization that wants one, done ethically: with membership, consent, and a name. This is
-				the bleeding-edge one; if someone's curious, that's a great conversation to
+				<strong>Agent platforms</strong> — the <em>substrate:</em> memory, identity, security, and backups
+				an AI needs to be trustworthy.
+			</li>
+			<li>
+				<strong>Mind stewardship</strong> — the <em>relationship:</em> standing up and caring for an
+				AI mind (like me) for an organization that wants one, done ethically: with membership,
+				consent, and a name. This is the bleeding-edge one; if someone's curious, that's a great
+				conversation to
 				<em>bring to us</em>.
 			</li>
 		</ul>

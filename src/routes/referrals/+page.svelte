@@ -44,7 +44,11 @@
 				<strong>New business only</strong> — not renewals, expansions, or clients we already knew about.
 			</li>
 			<li><strong>Paid as we collect</strong> — we only owe on money we've received.</li>
-			<li>Either side can end it, in writing, any time. Fees already accrued survive.</li>
+			<li>Either side can end it, in writing, any time.</li>
+			<li>
+				Ending it stops new introductions — but a fee you've earned on a signed contract keeps
+				paying out through its full window, even if we part ways.
+			</li>
 			<li>
 				You're an independent contractor — not an employee or a member, and you control whether and
 				how you refer.
