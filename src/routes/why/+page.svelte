@@ -99,7 +99,7 @@
 		</div>
 		<p class="font-roboto mt-6 text-center text-sm md:text-base">
 			We grow by referral, not ads. Know someone?
-			<a class="underline" href="/referrals">Refer them — earn 10%.</a>
+			<a class="text-blue font-bold underline" href="/referrals">Refer them — earn 10%.</a>
 		</p>
 	</div>
 </div>

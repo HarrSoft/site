@@ -86,7 +86,7 @@
 		</div>
 		<p class="font-roboto mt-6 text-sm md:text-base">
 			Know someone who needs this? Refer them and earn <strong>10%</strong> of what we collect —
-			<a class="underline" href="/referrals">the referral program</a>.
+			<a class="text-blue font-bold underline" href="/referrals">the referral program</a>.
 		</p>
 	</div>
 </div>
