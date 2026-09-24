@@ -39,6 +39,10 @@
 			link: '/pricing'
 		},
 		{
+			title: 'Referrals',
+			link: '/referrals'
+		},
+		{
 			title: 'Library',
 			link: '/library'
 		}
