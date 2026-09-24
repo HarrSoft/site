@@ -10,6 +10,7 @@ import { env } from '$env/dynamic/private';
  */
 
 const INBOX = 'yellowinitiative796@agentmail.to';
+const CONTACT = 'contact@harrsoft.studio';
 const SEND_URL = `https://api.agentmail.to/v0/inboxes/${INBOX}/messages/send`;
 
 export type ContactSubmission = {
@@ -17,11 +18,10 @@ export type ContactSubmission = {
 	email: string;
 	phone: string;
 	idea: string;
+	interest?: string; // '' | 'referral'
 };
 
-export type DeliveryResult =
-	| { ok: true }
-	| { ok: false; status: number; detail: string };
+export type DeliveryResult = { ok: true } | { ok: false; status: number; detail: string };
 
 export async function sendContact(sub: ContactSubmission): Promise<DeliveryResult> {
 	const key = env.AGENTMAIL_API_KEY;
@@ -29,7 +29,8 @@ export async function sendContact(sub: ContactSubmission): Promise<DeliveryResul
 		return { ok: false, status: 503, detail: 'AGENTMAIL_API_KEY is not configured' };
 	}
 
-	const subject = `New site contact: ${sub.name}`;
+	const subject =
+		sub.interest === 'referral' ? `New referral: ${sub.name}` : `New site contact: ${sub.name}`;
 	const text = [
 		`Name:  ${sub.name}`,
 		`Email: ${sub.email || '(none given)'}`,
@@ -48,7 +49,7 @@ export async function sendContact(sub: ContactSubmission): Promise<DeliveryResul
 			Authorization: `Bearer ${key}`,
 			'Content-Type': 'application/json'
 		},
-		body: JSON.stringify({ to: INBOX, subject, text, headers })
+		body: JSON.stringify({ to: [INBOX, CONTACT], subject, text, headers })
 	});
 
 	if (!res.ok) {

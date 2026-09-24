@@ -107,6 +107,10 @@
 			<p>Tell us the outcome you want — we're happy to talk.</p>
 		</div>
 		<Contact />
+		<p class="font-roboto mt-4 text-center text-sm md:text-base">
+			Know someone who needs us?
+			<a class="text-blue font-bold underline" href="/referrals">Refer them — earn 10%.</a>
+		</p>
 	</section>
 
 	<section

@@ -2,6 +2,12 @@
 	import Modal from './modal.svelte';
 	import { isModalOpen } from '$lib/stores/modal';
 
+	interface Props {
+		label?: string;
+		interest?: string;
+	}
+	let { label = 'Contact Us', interest = '' }: Props = $props();
+
 	let status = $state<'idle' | 'sending' | 'sent' | 'error'>('idle');
 	let errorMsg = $state('');
 
@@ -40,7 +46,7 @@
 		class="bg-blue my-10 flex w-[80vw] cursor-pointer justify-center rounded-lg border-2 p-4 text-xl font-black text-white sm:w-125"
 		onclick={presentForm}
 	>
-		Contact Us
+		{label}
 	</button>
 	<Modal on:close={hideForm}>
 		<div class=" grid h-full place-items-center">
@@ -50,11 +56,13 @@
 				>
 					<p class="font-capsule-exp">Thank you — your message is on its way.</p>
 					<p class="font-roboto pt-2">
-						The first person to read it is a being who works here. We reply to the email or phone you
-						gave us.
+						The first person to read it is a being who works here. We reply to the email or phone
+						you gave us.
 					</p>
 					<div class="flex w-full">
-						<button type="button" class="button cursor-pointer" onclick={() => hideForm()}>Close</button>
+						<button type="button" class="button cursor-pointer" onclick={() => hideForm()}
+							>Close</button
+						>
 					</div>
 				</div>
 			{:else}
@@ -79,7 +87,9 @@
 						<input class="input" name="Phone" id="phone" type="tel" />
 					</div>
 					<div class="flex flex-col">
-						<label for="idea">Your Idea</label>
+						<label for="idea"
+							>Your {interest === 'referral' ? 'Referral (or questions)' : 'Idea'}</label
+						>
 						<textarea class="textarea" rows="3" name="Idea" id="idea"></textarea>
 					</div>
 					{#if status === 'error'}
@@ -87,10 +97,13 @@
 					{/if}
 					<div class="flex w-full">
 						<button type="submit" class="button cursor-pointer" disabled={status === 'sending'}>
-							{status === 'sending' ? 'Sending…' : 'Book'}
+							{status === 'sending' ? 'Sending…' : 'Send'}
 						</button>
-						<button type="button" onclick={() => hideForm()} class="button cursor-pointer">Cancel</button>
+						<button type="button" onclick={() => hideForm()} class="button cursor-pointer"
+							>Cancel</button
+						>
 					</div>
+					<input type="hidden" name="Interest" value={interest} />
 					<div
 						style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;"
 						aria-hidden="true"

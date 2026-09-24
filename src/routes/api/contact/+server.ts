@@ -16,6 +16,10 @@ export const POST: RequestHandler = async ({ request }) => {
 	const email = String(form.get('Email') ?? '').trim();
 	const phone = String(form.get('Phone') ?? '').trim();
 	const idea = String(form.get('Idea') ?? '').trim();
+	const rawInterest = String(form.get('Interest') ?? '')
+		.trim()
+		.toLowerCase();
+	const interest = rawInterest === 'referral' ? 'referral' : ''; // whitelist — never trust the field
 	const gotcha = String(form.get('_gotcha') ?? '').trim();
 
 	// Honeypot: a bot fills the hidden field. Report success; deliver nothing.
@@ -28,10 +32,13 @@ export const POST: RequestHandler = async ({ request }) => {
 		);
 	}
 	if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-		return json({ ok: false, error: 'That email address looks off — mind checking it?' }, { status: 400 });
+		return json(
+			{ ok: false, error: 'That email address looks off — mind checking it?' },
+			{ status: 400 }
+		);
 	}
 
-	const result = await sendContact({ name, email, phone, idea });
+	const result = await sendContact({ name, email, phone, idea, interest });
 	if (!result.ok) {
 		console.error('[api/contact]', result.detail);
 		return json(
