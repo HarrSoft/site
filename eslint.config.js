@@ -12,7 +12,7 @@ export default [
 	...svelte.configs['flat/recommended'],
 	prettier,
 	...svelte.configs['flat/prettier'],
-	...tailwind.configs['flat/recommended'],
+	tailwind.configs.recommended,
 	{
 		languageOptions: {
 			globals: {
@@ -26,6 +26,13 @@ export default [
 		languageOptions: {
 			parserOptions: {
 				parser: ts.parser
+			}
+		}
+	},
+	{
+		settings: {
+			tailwindcss: {
+				cssConfigPath: './src/app.css'
 			}
 		}
 	},

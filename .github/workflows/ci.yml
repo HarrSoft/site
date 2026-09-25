@@ -1,0 +1,39 @@
+name: CI
+
+# The pre-merge half of the loop. Vercel handles CD (main -> production,
+# branch -> preview); this is the CI: it proves a change *should* be allowed to
+# merge, before it does. Free for public repos.
+#
+# Scope note (2026-09-25): runs formatting, types and build — the checks that are
+# green today. `eslint` is deliberately NOT gated yet: the repo has existing lint
+# debt (356 problems, 16 errors) that deserves its own cleanup pass, not a
+# silently-red gate. See harrsoft-docs for the note.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    name: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install (clean, from the lockfile)
+        run: npm ci
+
+      - name: Format check (prettier)
+        run: npx prettier --check .
+
+      - name: Types (svelte-check)
+        run: npm run check
+
+      - name: Build
+        run: npm run build

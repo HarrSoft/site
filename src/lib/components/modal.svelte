@@ -11,7 +11,7 @@
 	let { children }: Props = $props();
 
 	const dispatch = createEventDispatcher();
-	function close(e: MouseEvent | KeyboardEvent) {
+	function close(e: Event) {
 		dispatch('close', e);
 	}
 

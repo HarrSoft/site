@@ -13,7 +13,7 @@
 
 <article class="text-blue mx-auto w-full max-w-3xl px-6 py-16">
 	<p class="font-capsule text-xs tracking-widest uppercase opacity-70">{data.item.kicker}</p>
-	<div class="prose-harrsoft mt-6 font-roboto leading-8">
+	<div class="prose-harrsoft font-roboto mt-6 leading-8">
 		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 		{@html html}
 	</div>
