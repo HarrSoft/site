@@ -60,10 +60,10 @@
 			grant-funded teams.
 		</p>
 
-		<h3 class="font-capsule mt-6 text-lg font-black">Development</h3>
+		<h3 class="font-capsule mt-6 text-lg font-black">Development — from $50 / hour</h3>
 		<p class="font-roboto mt-2 text-sm md:text-base">
-			Websites, web apps, documentation systems, and automations (n8n, Make, or a small script) —
-			scoped and quoted per project.
+			Websites, web apps, documentation systems, and automations (n8n, Make, or a small script).
+			Scoped and quoted per project — or billed hourly from $50/hr for open-ended work.
 		</p>
 
 		<h3 class="font-capsule mt-6 text-lg font-black">
